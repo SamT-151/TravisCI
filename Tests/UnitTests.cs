@@ -37,9 +37,9 @@ namespace TravisCILab
         [Test]
         public void Subtract_Valid()
         {
-            Assert.AreEqual(-1, Subtract("1", "2"));
-            Assert.AreEqual(1, Subtract("3", "2"));
-            Assert.AreEqual(6, Subtract("13", "7"));
+            Assert.AreEqual(-1, Program.Subtract("1", "2"));
+            Assert.AreEqual(1, Program.Subtract("3", "2"));
+            Assert.AreEqual(6, Program.Subtract("13", "7"));
         }
 
         [Test]
@@ -62,9 +62,9 @@ namespace TravisCILab
         [Test]
         public void Multiply_Valid()
         {
-            Assert.AreEqual(2, Multiply("1", "2"));
-            Assert.AreEqual(-6, Multiply("3", "-2"));
-            Assert.AreEqual(-35, Multiply("-5", "7"));
+            Assert.AreEqual(2, Program.Multiply("1", "2"));
+            Assert.AreEqual(-6, Program.Multiply("3", "-2"));
+            Assert.AreEqual(-35, Program.Multiply("-5", "7"));
         }
 
         [Test]
@@ -86,9 +86,9 @@ namespace TravisCILab
         //Test Divide
         public void Divide_Valid()
         {
-            Assert.AreEqual(0.5, Divide("1", "2"));
-            Assert.AreEqual(-1.5, Divide("3", "-2"));
-            Assert.AreEqual(-5, Divide("-35", "7"));
+            Assert.AreEqual(0.5, Program.Divide("1", "2"));
+            Assert.AreEqual(-1.5, Program.Divide("3", "-2"));
+            Assert.AreEqual(-5, Program.Divide("-35", "7"));
         }
 
         [Test]
@@ -111,9 +111,9 @@ namespace TravisCILab
         [Test]
         public void Power_Valid()
         {
-            Assert.AreEqual(8, Power("2", "3"));
-            Assert.AreEqual(2, Power("4", "0.5"));
-            Assert.AreEqual(-1, Power("-1", "2"));
+            Assert.AreEqual(8, Program.Power("2", "3"));
+            Assert.AreEqual(2, Program.Power("4", "0.5"));
+            Assert.AreEqual(-1, Program.Power("-1", "2"));
         }
 
         [Test]
