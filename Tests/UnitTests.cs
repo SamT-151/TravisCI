@@ -35,7 +35,7 @@ namespace TravisCILab
 
         //Test Subtract
         [Test]
-        public void Subtract_Valid()
+        public void Subtract_Valid_Thompson()
         {
             Assert.AreEqual(-1, Program.Subtract("1", "2"));
             Assert.AreEqual(1, Program.Subtract("3", "2"));
@@ -43,7 +43,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Subtract_Invalid()
+        public void Subtract_Invalid_Thompson()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
             Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
@@ -51,7 +51,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Subtract_Null()
+        public void Subtract_Null_Thompson()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
@@ -60,7 +60,7 @@ namespace TravisCILab
 
         //Test Multiply
         [Test]
-        public void Multiply_Valid()
+        public void Multiply_Valid_Thompson()
         {
             Assert.AreEqual(2, Program.Multiply("1", "2"));
             Assert.AreEqual(-6, Program.Multiply("3", "-2"));
@@ -68,7 +68,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Multiply_Invalid()
+        public void Multiply_Invalid_Thompson()
         {
             Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
             Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
@@ -76,7 +76,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Multiply_Null()
+        public void Multiply_Null_Thompson()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
@@ -84,7 +84,7 @@ namespace TravisCILab
         }
 
         //Test Divide
-        public void Divide_Valid()
+        public void Divide_Valid_Thompson()
         {
             Assert.AreEqual(0.5, Program.Divide("1", "2"));
             Assert.AreEqual(-1.5, Program.Divide("3", "-2"));
@@ -92,7 +92,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Divide_Invalid()
+        public void Divide_Invalid_Thompson()
         {
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
             Assert.Throws<FormatException>(() => Program.Divide("a", "1"));
@@ -100,7 +100,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Divide_Null()
+        public void Divide_Null_Thompson()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -109,15 +109,15 @@ namespace TravisCILab
 
         //Test Power
         [Test]
-        public void Power_Valid()
+        public void Power_Valid_Thompson()
         {
             Assert.AreEqual(8, Program.Power("2", "3"));
             Assert.AreEqual(2, Program.Power("4", "0.5"));
-            Assert.AreEqual(-1, Program.Power("-1", "2"));
+            Assert.AreEqual(1, Program.Power("-1", "2"));
         }
 
         [Test]
-        public void Power_Invalid()
+        public void Power_Invalid_Thompson()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
@@ -125,11 +125,17 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Power_Null()
+        public void Power_Null_Thompson()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
+        }
+
+        [Test]
+        public void Power_Intentional_Fail_Thompson()
+        {
+            Assert.AreEqual(-1, Program.Power("-1", "2"));
         }
     }
 }
