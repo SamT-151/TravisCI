@@ -131,11 +131,5 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
         }
-
-        [Test]
-        public void Power_Intentional_Fail_Thompson()
-        {
-            Assert.AreEqual(-1, Program.Power("-1", "2"));
-        }
     }
 }
